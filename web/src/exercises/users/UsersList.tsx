@@ -1,13 +1,12 @@
 // -------------------------------------------------------------------------- //
 //
-// This page shipped broken - open http://localhost:5173/users and
+// Exercise 3. This page shipped broken - open http://localhost:5173/users and
 // look at the console while it runs.
 //
-//
-// Find and fix whatever makes the page work chaotic.
+// First, find and fix whatever makes the page work chaotic.
 //
 // The endpoint is `GET /api/users?q=<text>` and the backend is fine; do not
-// change it.
+// change it. The rest of the repo (src/api, src/components) is fair game.
 //
 // -------------------------------------------------------------------------- //
 

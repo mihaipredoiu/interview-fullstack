@@ -41,10 +41,16 @@ class DeviceListView(APIView):
     """
     Devices listing view.
 
-    Make this view as fast as possible. This endpoint is functionally correct: every
-    test in `api/inventory/tests/test_devices_api.py` passes except the query
-    count one. It is also slow enough to be observed in
-    http://localhost:5173/devices by looking  at the timing badges.
+    Exercise 4 - make this view as fast as possible. It is functionally correct:
+    it returns the right devices, with the right counts, in the right order. It
+    is also slow, and it gets slower with every row - every test in
+    `api/inventory/tests/test_devices_api.py` caps the whole listing at 3
+    queries, and none of them passes today.
+
+    The response shape is fixed: the frontend is given, so `items`,
+    `total_count` and `elapsed_ms` must keep looking exactly like they do now.
+    Open http://localhost:5173/devices and read the timing badges before and
+    after.
     """
 
     def get(self, request: Request) -> Response:

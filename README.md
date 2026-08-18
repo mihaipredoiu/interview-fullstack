@@ -19,8 +19,8 @@ cd web && npm install && npm run dev
 ```
 
 On Windows, `make` doesn't exist and the virtualenv puts its executables in
-`api\.venv\Scripts\` rather than `api/.venv/bin/`. Option A avoids all of that -
-use it unless you already have a working WSL or Git Bash setup.
+`api\.venv\Scripts\` rather than `api/.venv/bin/`. Run the commands above with
+that path, or use WSL / Git Bash if you already have one set up.
 
 The database is a gitignored `api/db.sqlite3` file, populated by a seed command:
 
@@ -42,12 +42,12 @@ make test-api    # pytest
 
 Build a component that lists tasks, filters them and summarises them.
 
-|         |                                                                                                |
-| ------- | ---------------------------------------------------------------------------------------------- |
-| Work in | [web/src/exercises/task-list/TaskList.tsx](web/src/exercises/task-list/TaskList.tsx)           |
-| Given   | `data.ts` (dataset + types), `ListItem.tsx`, `TaskList.module.scss`                            |
-| Spec    | No tests. The requirements below, the page itself and your own judgement.                      |
-| Route   | http://localhost:5173/tasks                                                                    |
+|         |                                                                                      |
+| ------- | ------------------------------------------------------------------------------------ |
+| Work in | [web/src/exercises/task-list/TaskList.tsx](web/src/exercises/task-list/TaskList.tsx) |
+| Given   | `data.ts` (dataset + types), `ListItem.tsx`, `TaskList.module.scss`                  |
+| Spec    | No tests. The requirements below, the page itself and your own judgement.            |
+| Route   | http://localhost:5173/tasks                                                          |
 
 1. Render the tasks using `<ListItem />`.
 2. Filter the list by the status dropdown's selection.
@@ -99,12 +99,12 @@ This page shipped broken. Open it, open the console, and take it from there.
 The devices page is functionally correct and embarrassingly slow. The page
 shows you exactly how slow.
 
-|         |                                                                                                                           |
-| ------- | ------------------------------------------------------------------------------------------------------------------------- |
-| Work in | [api/inventory/devices_view.py](api/inventory/devices_view.py)                                                            |
-| Given   | the frontend page (done - do not change it), `models.py`, the seed data                                                   |
+|         |                                                                                                                                     |
+| ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Work in | [api/inventory/devices_view.py](api/inventory/devices_view.py)                                                                      |
+| Given   | the frontend page (done - do not change it), `models.py`, the seed data                                                             |
 | Spec    | [api/inventory/tests/test_devices_api.py](api/inventory/tests/test_devices_api.py) - every test caps the whole listing at 3 queries |
-| Route   | http://localhost:5173/devices - timing badges update on every request                                                     |
+| Route   | http://localhost:5173/devices - timing badges update on every request                                                               |
 
 1. Reproduce it: `make seed`, open the page, note the numbers.
 

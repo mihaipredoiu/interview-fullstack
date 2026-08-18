@@ -5,7 +5,7 @@ import styles from './TaskList.module.scss'
 
 // -------------------------------------------------------------------------- //
 //
-// Build a component that displays a list of tasks.
+// Exercise 1 - build a component that displays a list of tasks.
 //
 // Requirements (each maps to a TODO(n) in the code below):
 //   1. Render the tasks list using the <ListItem /> component.
@@ -18,7 +18,6 @@ import styles from './TaskList.module.scss'
 //
 // The dataset and types live in `./data` - import from there, do not redefine them.
 // Basic styles are available in `TaskList.module.scss` (feel free to extend them).
-//
 //
 // -------------------------------------------------------------------------- //
 
